@@ -5,7 +5,7 @@
 
 ## Table of Contents
 
-- [About the Project](#about-the-project)
+- [About](#about)
 - [Tools Used](#tools-used)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
@@ -18,7 +18,7 @@
 
 ---
 
-## About the Project
+## About
 
 This project was created for teaching the class CSCI 4271W --- Designing and Developing Secure Software at UMN Twin Cities. I developed and taught from this project during Spring Semester 2024. 
 
