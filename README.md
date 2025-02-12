@@ -28,7 +28,7 @@ Lab developed for the purposes of teaching about topics related to memory safety
 
 As a TA I would recommend that my students work collaboratively on labs in groups of 2-3 students. This was not strictly required, and I encouraged my students to do whatever was most helpful for their learning.
 
-
+A useful tool for this lab, and a major focus of it is the GNU Debugger (GDB).
 
 ---
 
