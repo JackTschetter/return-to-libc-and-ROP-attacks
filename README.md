@@ -41,11 +41,10 @@ In this lab students pretended to be the attacker. During the teaching of this c
 
 ### Prerequisites
 
-- A machine running Ubuntu 22.04. The program should on most recent Linux systems, although the supported configuration is Ubuntu 22.04.
-- C. The entire project was written using C programming language.
-- GTK 3 family of GUI libraries. This assumes you want a GUI version.
-- (Optional) The precompiled binary from this repository.
-- (Optional) A hexadecimal editor. 
+- A machine running Ubuntu 22.04. The rest of these instructions assume this is what you are using. For instance even if you are using an older Ubuntu 20.04 machine these attacks might not work as expected.
+- C. The entire code base for this lab was written using C programming language.
+- (Optional) GNU Project Debugger (GDB). I say optional, but highly recommended.
+- (Optional) objdump. I say optional, but highly recommended.
 
 ### Installation
 
