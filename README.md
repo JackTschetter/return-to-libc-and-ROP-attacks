@@ -45,7 +45,7 @@ In this lab students pretended to be the attacker. During the teaching of this c
 - **printf-server.c**. The victim program for this labs attack.
 - **C**. The entire code base for this lab was written using C programming language.
 - **(Optional) printf-server**. We provided this precompiled binary. The source file printf-server.c was provided, so students can also compile directly. More can go wrong with that approach since this is low level, and various flags were passed in the compilation.
-- **(Optional) attack-template.c**. Template code to get students started on launching the third attack which was bypassing ASLR. Technically this is not needed, but having the template makes life easier since it already provides the code to start up the vulnerable server as a child process, and to send commands and receive data back from it. All that is left is to put the pieces together by implementing the function attack.
+- **(Optional) attack.c**. Template code to get students started on launching the third attack which was bypassing ASLR. Technically this is not needed, but having the template makes life easier since it already provides the code to start up the vulnerable server as a child process, and to send commands and receive data back from it. All that is left is to put the pieces together by implementing the function attack.
 - **(Optional) GNU Project Debugger (GDB)**. I say optional, but highly recommended.
 - **(Optional) objdump**. I say optional, but highly recommended.
 
