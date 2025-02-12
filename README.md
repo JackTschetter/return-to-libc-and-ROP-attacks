@@ -74,6 +74,11 @@ ${\color{red}WARNING}$ This is intentionally buggy/vulnerable code created for t
 
 ## Lab Walkthrough
 
+### Reconnaissance of the victim
+### Non-ASLR return-to-libc attack
+### Adding a Bit of ROP
+### Bypassing ASLR
+
 ## Usage
 
 This project was created for the purposes of teaching the class Designing and Developing Secure Software (CSCI 4271W) at UMN Twin Cities. For teaching purposes we provided students in the course the same source code, sample images, and pre compiled binary available for download from this repo. 
