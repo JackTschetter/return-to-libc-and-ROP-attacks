@@ -25,11 +25,7 @@
 
 ## About
 
-Lab developed for the purposes of teaching about topics related to memory safety vulnerabilities and understanding low level program behavior with a debugger.<br>
-
-As a TA I would recommend that my students work collaboratively on labs in groups of 2-3 students. This was not strictly required, and I encouraged my students to do whatever was most helpful for their learning.
-
-A useful tool for this lab, and a major focus of it is the GNU Debugger (GDB).
+In this lab students pretended to be the attacker. During the teaching of this course I didn't go in too much depth about defenses, and counter attack techniques. This lab went one step further then previous labs and projects by letting students create a more sophisticated attack that works even in the presence of W xor X and ASLR.
 
 ---
 
