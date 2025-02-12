@@ -81,11 +81,9 @@ ${\color{red}WARNING}$ For teaching purposes this is deliberately vulnerable cod
 
 ## Usage
 
-This project was created for the purposes of teaching the class Designing and Developing Secure Software (CSCI 4271W) at UMN Twin Cities. For teaching purposes we provided students in the course the same source code, sample images, and pre compiled binary available for download from this repo. 
+I developed this lab for teaching the class Designing and Developing Secure Software (CSCI 4271W) at UMN Twin Cities. We provided students in the course the same source code, and pre compiled binary available for download from this repo. 
 
-The source code is deliberately buggy and does not follow software engineering best practices. In particular their were 4 vulnerabilities which were deliberately planted in the BCIMGVIEW.c source. The goal of this assignment was for students to discover, exploit and mitigate at least 3/4 of the planted vulnerabilities. 
-
-To help with this I regularly held labs, and office hours to assist the students. The goal of this project was to teach core competencies such as code auditing, strategies to audit large code bases, and heuristics to understand program execution logic/control flow. Along with professor I also taught students in the usage of a debugger (GDB/LLVM), and a fuzzer (AFL++). Our expectation was that students would require usage of the debugger and or fuzzer to efficiently uncover the vulnerabilities.
+In addition to leading instruction during weekly lab sections, I held regular office hours and made myself available by appointment to help students.
 
 ### Disclaimer
 
@@ -97,9 +95,9 @@ In the case that you are not a current or propsective student, and would like to
 
 Contact me anytime! Day or night. My email is jackrtschetter@gmail.com, and phone number is 612-380-1832. Texting with a short introduction is the most efficient way to get a hold of me. I will respond ASAP.<br>
 
-I would be happy to discuss in (much) greater technical detail the C programming language, and the low level analysis of binary code.<br>
+Assuming you are not a current or prospective student in 4271W, I would be more then happy to go over the answers to this lab.<br>
 
-I would also be happy to instruct in the various code auditing, debugging, and fuzzing techniques in which I guided my students to efficiently uncover and attack the vulnerabilities.
+More generally I would be happy to discuss in (much) greater technical detail the C programming language, and the low level analysis of binary code.<br>
 
 ## Acknowledgements
 
