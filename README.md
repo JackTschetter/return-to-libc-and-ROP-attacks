@@ -85,12 +85,6 @@ I developed this lab for teaching the class Designing and Developing Secure Soft
 
 In addition to leading instruction during weekly lab sections, I held regular office hours and made myself available by appointment to help students.
 
-### Disclaimer
-
-To my knowledge this project or some close derivative is still being used for teaching. After careful consideration, and out of fairness to current, former, and future students I will not be making details of the vulnerabilities, attacks or mitigations public.<br>
-
-In the case that you are not a current or propsective student, and would like to understand what the vulnerabilites were, how to find them, or how to mitigate them, reach out to me (contact below), and I would be more then happy to make some time on my calendar and we could go over these details and more in some detail.
-
 ## Contact
 
 Contact me anytime! Day or night. My email is jackrtschetter@gmail.com, and phone number is 612-380-1832. Texting with a short introduction is the most efficient way to get a hold of me. I will respond ASAP.<br>
