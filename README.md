@@ -57,26 +57,26 @@ In this lab students pretended to be the attacker. During the teaching of this c
    git clone https://github.com/JackTschetter/return-to-libc-and-ROP-attacks
    cd return-to-libc-and-ROP-attacks/src
 
-This repo provides a precompiled victim binary. This victim binary was compiled from the bcimgview.c source on a Linux x86-64 machine, so it should work on most recent Linux systems. I just recently was able to get the program to work, with slight modifications, on my brand new MacBook air which has an ARM based M3/Apple Silicon chip. This was A LOT of extra work, so please stick with the provided binary on Ubuntu Linux 22.04 for best results.
+This repo contains the code for this weeks victim as both a .c source file, and a precompiled binary. It also contains the files attack-template.c, and attack.c useful for constructing attacks in the final part. 
 
-If their are any die hard Mac lovers such as myself, feel free to contact me and I can walk you through how to get this running on your device and OS.
+It is strongly recommended to use the precompiled victim. For anyone interested the command used to compile the victim binary on Ubuntu Linux 22.04 was<br>
 
-For anyone interested the command used to compile the victim binary on Ubuntu Linux 22.04 was<br>
+**gcc-11 -Og -no-pie -fno-stack-protector -Wall -g printf-server.c -o printf-server**
 
-**gcc -no-pie -fno-stack-protector -Og -g -Wall \
-    $(pkg-config --cflags gtk+-3.0) \
-    bcimgview.c -o bcimgview \
-    -lgtk-3 -lgobject-2.0 -lglib-2.0 -lgdk_pixbuf-2.0 -lm**
+The option -fno-stack-protector disables stack canaries. We disabled that defense because todays attack is still based on overwriting a return address. -Og is a modest optimization level that uses registers and removes unused code. Compared to some other victim programs that we compiled without any optimization, we had to add some extra code in this program to make sure the vulnerable operations were compiled in the way we wanted and not optimized away.<br>
 
-${\color{red}WARNING}$ This is intentionally buggy/vulnerable code created for the purpose of teaching a class on software security. This command compiles the binary in a way that intentionally disables various defense mechanisms against certain kinds of attacks.
+${\color{red}WARNING}$ For teaching purposes this is deliberately vulnerable code that does not follow software engineering best practices. This command compiles the binary in a way that intentionally disables various defense mechanisms against certain kinds of attacks.
 
 ---
 
 ## Lab Walkthrough
 
 ### Reconnaissance of the victim
+
 ### Non-ASLR return-to-libc attack
+
 ### Adding a Bit of ROP
+
 ### Bypassing ASLR
 
 ## Usage
