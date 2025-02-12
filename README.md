@@ -31,9 +31,9 @@ In this lab students pretended to be the attacker. During the teaching of this c
 
 ## Tools Used
 
-- **Operating System**: Linux. Perhaps in the future other compatible Unix variants.
-- **Programming Language(s)**: C
-- **Libraries**: The GUI portion uses the GTK 3 family of GUI libraries.
+- **Operating System**: x86 Linux. Specifically all students were using our lab machines which come pre installed with Ubuntu 22.04. This is important because this lab is all about low level attacks. Differences in how the victim program is compiled will affect what attacks are possible.
+- **Programming Language(s)**: C, shell
+- **Tools**: GNU Project Debugger (GDB), objdump. Neither of these was strictly required, but I found they were very useful to my students.
 
 ---
 
@@ -72,7 +72,7 @@ ${\color{red}WARNING}$ This is intentionally buggy/vulnerable code created for t
 
 ## Usage
 
-This project was created for the purposes of teaching the class Designing and Developing Secure Software at UMN Twin Cities. For teaching purposes we provided students in the course the same source code, sample images, and pre compiled binary available for download from this repo. 
+This project was created for the purposes of teaching the class Designing and Developing Secure Software (CSCI 4271W) at UMN Twin Cities. For teaching purposes we provided students in the course the same source code, sample images, and pre compiled binary available for download from this repo. 
 
 The source code is deliberately buggy and does not follow software engineering best practices. In particular their were 4 vulnerabilities which were deliberately planted in the BCIMGVIEW.c source. The goal of this assignment was for students to discover, exploit and mitigate at least 3/4 of the planted vulnerabilities. 
 
