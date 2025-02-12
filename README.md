@@ -54,8 +54,8 @@ In this lab students pretended to be the attacker. During the teaching of this c
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/JackTschetter/ImageViewer
-   cd ImageViewer
+   git clone https://github.com/JackTschetter/return-to-libc-and-ROP-attacks
+   cd return-to-libc-and-ROP-attacks/src
 
 This repo provides a precompiled victim binary. This victim binary was compiled from the bcimgview.c source on a Linux x86-64 machine, so it should work on most recent Linux systems. I just recently was able to get the program to work, with slight modifications, on my brand new MacBook air which has an ARM based M3/Apple Silicon chip. This was A LOT of extra work, so please stick with the provided binary on Ubuntu Linux 22.04 for best results.
 
