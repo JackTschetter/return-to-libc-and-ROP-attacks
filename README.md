@@ -9,7 +9,7 @@
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-- [Lab Walkthrough](#lab-walkthrough)
+- [Lab](#lab-walkthrough)
     - [Reconnaissance of the Victim](#reconnaissance-of-the-victim)
     - [Non-ASLR Return to libc Attack](#non-aslr-return-to-libc-attack)
     - [Adding a Bit of ROP](#adding-a-bit-of-rop)
