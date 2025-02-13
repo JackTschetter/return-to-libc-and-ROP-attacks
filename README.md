@@ -65,7 +65,7 @@ It is strongly recommended to use the precompiled victim. For anyone interested 
 
 The option -fno-stack-protector disables stack canaries. We disabled that defense because todays attack is still based on overwriting a return address. -Og is a modest optimization level that uses registers and removes unused code. Compared to some other victim programs that we compiled without any optimization, we had to add some extra code in this program to make sure the vulnerable operations were compiled in the way we wanted and not optimized away.<br>
 
-${\color{red}WARNING}$ For teaching purposes this is deliberately vulnerable code that does not follow software engineering best practices. This command compiles the binary in a way that intentionally disables various defense mechanisms against certain kinds of attacks.
+${\color{red}WARNING}$ This is intentionally vulnerable low level code and source code that deliberately ignores software engineering best practices. These files were created for the sole purpose of teaching a class on Designing and Developing Secure Software. The command used to compile the binaries does so in a way that intentionally disables various defense mechanisms against certain kinds of attacks. Exercise enhanced caution when downloading and using the provided code.
 
 ---
 
