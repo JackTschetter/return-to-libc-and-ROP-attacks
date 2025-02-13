@@ -79,11 +79,15 @@ ${\color{red}WARNING}$ For teaching purposes this is deliberately vulnerable cod
 
 ### Bypassing ASLR
 
+---
+
 ## Usage
 
 I developed this lab for teaching the class Designing and Developing Secure Software (CSCI 4271W) at UMN Twin Cities. We provided students in the course the same source code, and pre compiled binary available for download from this repo. 
 
 In addition to leading instruction during weekly lab sections, I held regular office hours and made myself available by appointment to help students.
+
+---
 
 ## Contact
 
@@ -92,6 +96,8 @@ Contact me anytime! Day or night. My email is jackrtschetter@gmail.com, and phon
 Assuming you are not a current or prospective student in 4271W, I would be more then happy to go over the answers to this lab.<br>
 
 More generally I would be happy to discuss in (much) greater technical detail the C programming language, and the low level analysis of binary code.<br>
+
+---
 
 ## Acknowledgements
 
