@@ -6,7 +6,6 @@
 ## Table of Contents
 
 - [About](#about)
-- [Tools Used](#tools-used)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
@@ -17,10 +16,11 @@
     - [Bypassing ASLR](#bypassing-aslr)
 - [Usage](#usage)
     - [Disclaimer](#disclaimer)
-- [License](#license)
+- [Tools Used](#tools-used)
 - [Contact](#contact)
 - [Acknowledgments](#acknowledgments)
-
+- [License](#license)
+  
 ---
 
 ## About
