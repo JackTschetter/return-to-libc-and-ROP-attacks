@@ -73,6 +73,8 @@ ${\color{red}WARNING}$ For teaching purposes this is deliberately vulnerable cod
 
 ### Reconnaissance of the victim
 
+The victim in this lab is a simple server named printf-server. 
+
 ### Non-ASLR return-to-libc attack
 
 ### Adding a Bit of ROP
