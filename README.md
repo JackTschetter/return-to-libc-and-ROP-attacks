@@ -73,7 +73,7 @@ ${\color{red}WARNING}$ This is intentionally vulnerable low level code and sourc
 
 ### Reconnaissance of the victim
 
-The victim in this lab is a simple server named printf-server. 
+The victim in this lab is a simple server named printf-server. As the name suggests it provides the service of formatting integers using the C library printf function. 
 
 ### Non-ASLR return-to-libc attack
 
