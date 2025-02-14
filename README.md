@@ -65,7 +65,7 @@ It is strongly recommended to use the precompiled victim. For anyone interested 
       gcc-11 -Og -no-pie -fno-stack-protector -Wall -g printf-server.c -o printf-server
    ```
 
-The option ```bash -fno-stack-protector``` disables stack canaries. We disabled that defense because todays attack is still based on overwriting a return address. ```bash -Og ``` is a modest optimization level that uses registers and removes unused code. Compared to some other victim programs that we compiled without any optimization, we had to add some extra code in this program to make sure the vulnerable operations were compiled in the way we wanted and not optimized away.<br>
+The option ```-fno-stack-protector``` disables stack canaries. We disabled that defense because todays attack is still based on overwriting a return address. ```-Og ``` is a modest optimization level that uses registers and removes unused code. Compared to some other victim programs that we compiled without any optimization, we had to add some extra code in this program to make sure the vulnerable operations were compiled in the way we wanted and not optimized away.<br>
 
 ${\color{red}WARNING}$ This is intentionally vulnerable low level code and source code that deliberately ignores software engineering best practices. These files were created for the sole purpose of teaching a class on Designing and Developing Secure Software. The command used to compile the binaries does so in a way that intentionally disables various defense mechanisms against certain kinds of attacks. Exercise enhanced caution when downloading and using the provided code.
 
@@ -78,14 +78,14 @@ ${\color{red}WARNING}$ This is intentionally vulnerable low level code and sourc
 The victim in this lab is a simple server named printf-server. As the name suggests it provides the service of formatting integers using the C library printf function.<br>
 
 As an instructor the first thing I would encourage my students to do is to look over the source code for the program and try giving it some benign commands. Each command is a single line starting
-with a capital letter. The most important commands for the basic functionality are F to set a ```bash printf ``` format, N to set a number, and P to print it.<br>
+with a capital letter. The most important commands for the basic functionality are F to set a ```printf ``` format, N to set a number, and P to print it.<br>
 
 The command O has a buffer overflow. If given a long line starting with O the program will crash. As I did for previous programs vulnerable
-to a buffer overflow, I encouraged students to use commands inside GDB to figure out where the return address of the ```bash overflow ``` function is stored relative to the overflowed buffer ```bash buf ```.<br>
+to a buffer overflow, I encouraged students to use commands inside GDB to figure out where the return address of the ```overflow ``` function is stored relative to the overflowed buffer ```buf ```.<br>
 
 If the ```bash printf``` functionality didn't give it away this program also has a format string vulnerability. However for the purpose of this lab I only taught on information disclosure, not with usage of ```bash %n```.<br>
 
-Recall that Linux C binaries are usually dynamically linked with a system library, conventionally called the C library or ```bash libc```, which implements standard library functions, system calls, and other commonly used functions. This lab works closely with this library. One can list the libraries that a program dynamically links with using the command ```bash ldd```, and then use commands like ```bash objdump``` or ```bash nm``` on it. The ```bash ldd``` command lists the shared libraries that a program uses. For each one it prints the full path to the library and its base address.<br>
+Recall that Linux C binaries are usually dynamically linked with a system library, conventionally called the C library or ```libc```, which implements standard library functions, system calls, and other commonly used functions. This lab works closely with this library. One can list the libraries that a program dynamically links with using the command ```bash ldd```, and then use commands like ```objdump``` or ```nm``` on it. The ```ldd``` command lists the shared libraries that a program uses. For each one it prints the full path to the library and its base address.<br>
 
   ```bash
   ldd ./printf-server
