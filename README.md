@@ -61,7 +61,8 @@ This repo contains the code for this weeks victim as both a .c source file, and 
 
 It is strongly recommended to use the precompiled victim. For anyone interested the command used to compile the victim binary on Ubuntu Linux 22.04 was<br>
 
-**gcc-11 -Og -no-pie -fno-stack-protector -Wall -g printf-server.c -o printf-server**
+   ```bash
+      gcc-11 -Og -no-pie -fno-stack-protector -Wall -g printf-server.c -o printf-server
 
 The option -fno-stack-protector disables stack canaries. We disabled that defense because todays attack is still based on overwriting a return address. -Og is a modest optimization level that uses registers and removes unused code. Compared to some other victim programs that we compiled without any optimization, we had to add some extra code in this program to make sure the vulnerable operations were compiled in the way we wanted and not optimized away.<br>
 
