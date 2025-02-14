@@ -83,9 +83,9 @@ with a capital letter. The most important commands for the basic functionality a
 The command O has a buffer overflow. If given a long line starting with O the program will crash. As I did for previous programs vulnerable
 to a buffer overflow, I encouraged students to use commands inside GDB to figure out where the return address of the ```overflow ``` function is stored relative to the overflowed buffer ```buf ```.<br>
 
-If the ```bash printf``` functionality didn't give it away this program also has a format string vulnerability. However for the purpose of this lab I only taught on information disclosure, not with usage of ```bash %n```.<br>
+If the ```printf``` functionality didn't give it away this program also has a format string vulnerability. However for the purpose of this lab I only taught on information disclosure, not with usage of ```%n```.<br>
 
-Recall that Linux C binaries are usually dynamically linked with a system library, conventionally called the C library or ```libc```, which implements standard library functions, system calls, and other commonly used functions. This lab works closely with this library. One can list the libraries that a program dynamically links with using the command ```bash ldd```, and then use commands like ```objdump``` or ```nm``` on it. The ```ldd``` command lists the shared libraries that a program uses. For each one it prints the full path to the library and its base address.<br>
+Recall that Linux C binaries are usually dynamically linked with a system library, conventionally called the C library or ```libc```, which implements standard library functions, system calls, and other commonly used functions. This lab works closely with this library. One can list the libraries that a program dynamically links with using the command ```ldd```, and then use commands like ```objdump``` or ```nm``` on it. The ```ldd``` command lists the shared libraries that a program uses. For each one it prints the full path to the library and its base address.<br>
 
   ```bash
   ldd ./printf-server
