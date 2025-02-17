@@ -113,6 +113,9 @@ As a preliminary step I would have students try making a return to ```libc``` at
     nm -D /lib/x86_64-linux-gnu/libc.so.6 | grep ' exit'
   ```
 
+The ```nm``` command prints symbol table information about an executable or library (here with -D to look at the dynamic symbols of a shared library). Because shared libraries are designed from the beginning to be loaded at different addresses, what's stored in the binary and printed by ```nm``` is just a relative address. You should be able to see that the sum of these two numbers matches the address you saw from GDB.<br>
+
+Verify that you can overflow the buffer and cause ```exit``` to be executed. Note that if exit runs correctly, the program will stop without crashing or printing anything.
 
 ### Adding a Bit of ROP
 
