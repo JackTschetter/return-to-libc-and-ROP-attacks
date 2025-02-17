@@ -162,6 +162,12 @@ I developed this lab for teaching the class Designing and Developing Secure Soft
 
 In addition to leading instruction during weekly lab sections, I held regular office hours and made myself available by appointment to help students.
 
+### Disclaimer
+
+To my knowledge this project or some close derivative is still being used for teaching. After careful consideration, and out of fairness to current, former, and future students I will not be making detailed answers to this lab public.
+
+In the case that you are not a current or propsective student in 4271W, and would like to go over the answers to this weeks lab questions, I would be more then happy to make some time on my calendar.
+
 ---
 
 ## Contact
