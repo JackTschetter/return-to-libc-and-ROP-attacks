@@ -174,7 +174,7 @@ In the case that you are not a current or propsective student in 4271W, and woul
 
 Contact me anytime! Day or night. My email is jackrtschetter@gmail.com, and phone number is 612-380-1832. Texting with a short introduction is the most efficient way to get a hold of me. I will respond ASAP.<br>
 
-Assuming you are not a current or prospective student in 4271W, I would be more then happy to go over the answers to this lab.<br>
+Assuming you are not a current or prospective student in 4271W, I would be more then happy to go over detailed answers to this lab.<br>
 
 More generally I would be happy to discuss in (much) greater technical detail the C programming language, and the low level analysis of binary code.<br>
 
