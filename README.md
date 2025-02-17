@@ -140,6 +140,20 @@ command you want to give to the shell after the command to ```printf-server```, 
 
 ### Bypassing ASLR
 
+Let's generalize the attack so it works even in the presence of ASLR. All the libc-based addresses you're using will now change every time you run the victim, so you can not just hard code them. Conveniently the program also has a format string vulnerability, so you can get information that will let you figure out the library address from the program.<br>
+
+Notice that the main function has a function pointer variable that is initialized to the location of the ```printf``` function in the C library.<br>
+
+Using a format string with %lx to figure out how to leak that value. Notice that even under ASLR, the starting address of the C library always ends in 0x000, which makes it easier to see which address is which.<br>
+
+First try doing the location sensitive attack in a manual way by recomputing the addresses as needed; you may still need a small script or program to supply the attack at the right time. A more sophisticated approach is to embed your attack into a program itself that interacts with the victim program.<br>
+
+To this end I provided a template for my students. Part of this is available in this repository under src as attack.c<br>
+
+The template already provides the code to start up the vulnerable server as a child process, and to send commands and receive data back from it.<br>
+
+However you still need to put the pieces together by actually implementing the function attack.
+
 ---
 
 ## Usage
