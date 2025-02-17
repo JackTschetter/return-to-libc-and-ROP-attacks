@@ -102,6 +102,7 @@ Since the W xor X protection is enabled, we can't inject any shellcode in this p
     system("/bin/sh"); exit(anything);
   ```
 
+The call to ```exit``` is not strictly needed for the attack. For teaching purposes, it is just convienient to terminate the attack to better distinguish between things going wrong before the attack and after. We don't really care about the value of the argument to ```exit```, but we do care about the argument to ```system```.
 
 
 ### Adding a Bit of ROP
