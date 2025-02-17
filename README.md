@@ -102,7 +102,16 @@ Since the W xor X protection is enabled, we can't inject any shellcode in this p
     system("/bin/sh"); exit(anything);
   ```
 
-The call to ```exit``` is not strictly needed for the attack. For teaching purposes, it is just convienient to terminate the attack to better distinguish between things going wrong before the attack and after. We don't really care about the value of the argument to ```exit```, but we do care about the argument to ```system```.
+The call to ```exit``` is not strictly needed for the attack. For teaching purposes, it is just convienient to terminate the attack to better distinguish between things going wrong before the attack and after. We don't really care about the value of the argument to ```exit```, but we do care about the argument to ```system```.<br>
+
+The pieces of code and data we need for the attack are all kept in the library that is called ```libc``` on Unix systems. Even though we have randomization turned off for now, the OS still loads the library at an address of the OS's choosing, so you'll need to keep in mind how the addresses are changed based on where the library is loaded; Once we turn on ASLR the locations will also be different every time the program runs.<br>
+
+As a preliminary step I would have students try making a return to ```libc``` attack that just calls ```exit```. This is particularly easy because it does not require setting up the argument. Basically the overflow just needs to overwrite the return address of overflow to be the entry point of ```exit```. To see how the address mapping happens, try two ways of finding the location of ```exit```. First, run the server under GDB, and after the program is running and stopped at a breakpoint, look at the results of ```p exit```. Second, look at the output of the this command (based on the C library location we found earlier)
+
+  ```bash
+    ldd ./printf-server
+    nm -D /lib/x86_64-linux-gnu/libc.so.6 | grep ' exit'
+  ```
 
 
 ### Adding a Bit of ROP
