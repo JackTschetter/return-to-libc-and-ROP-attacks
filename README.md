@@ -119,6 +119,25 @@ Verify that you can overflow the buffer and cause ```exit``` to be executed. Not
 
 ### Adding a Bit of ROP
 
+The classic version of return to ```libc``` also put the arguments to the library function in the stack overflow, because that was the calling convention for Linux/x86-32. For our attack against a 64-bit binary, that will not work because the argument to ```system``` needs to be supplied in the register %rdi.<br>
+
+For this part of the attack we need a very simple version of the idea of a gadget from ROP: we need to find code that loads a value from the stack into %rdi and then returns. That will be the first "function" that the attack returns to, and then when that function returns it will continue with other return addresses on the stack. As the easiest version of this task, you'll see there's a function named ```useful_gadget``` in the victim program
+that is useful for this purpose. If you're feeling more ambitious, this gadget also exists in the C library, though there's an extra trick needed to find it there.<br>
+
+The two other obvious pieces you need in your attack are the address of the ```system``` function and the address of a copy of the string ```/bin/sh```. You can find the address of ```system``` just like we did for ```exit``` before. The strings program can be used to find printable strings in a binary, in particular
+try this command
+
+  ```bash
+      strings -tx -a /lib/x86_64-linux-gnu/libc.so.6 | fgrep /bin/sh
+  ```
+
+One other trick is related to the fact that some x86-64 code depends on the stack pointer being 16-byte aligned, and not just 8-byte aligned. Some library functions will crash if you call them the stack location at an odd multiple of 8. To fix this you can just pad your return oriented program with the address of a gadget that doesn't do anything at all, and just returns right away. This kind of gadget is even easier to find.<br>
+
+The full overflow is going to have a lot of binary data and null bytes in it, so it will not be convenient to type it in on the terminal. Instead I encourage my students to use something like a scripting language with a pack command, or write the attack in a hexadecimal editor.<br>
+
+Even though it's binary data, ```printf-server``` still terminates each command with a newline, so be sure it ends with that. After you've started a shell, you'll want to give it another command, but if you're redirecting the input from a file or a pipe you won't automatically get a prompt back. For a simple test you can just put the
+command you want to give to the shell after the command to ```printf-server```, since ```printf-server``` doesn't read ahead. For instance ```xcalc``` and a newline to start a calculator.
+
 ### Bypassing ASLR
 
 ---
