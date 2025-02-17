@@ -94,6 +94,10 @@ Recall that Linux C binaries are usually dynamically linked with a system librar
 
 ### Non-ASLR return-to-libc attack
 
+For the first step of attack development I had students focus on building an attack that works when ASLR is disabled. For this part of the lab use ```setarch -R``` when you run the victim or for your whole shell.<br>
+
+Since the W xor X protection is enabled, we can't inject any shellcode in this program. We need to achieve the attacker's functionality using code already available in the program's address space. 
+
 ### Adding a Bit of ROP
 
 ### Bypassing ASLR
