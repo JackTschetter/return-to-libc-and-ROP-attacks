@@ -96,7 +96,11 @@ Recall that Linux C binaries are usually dynamically linked with a system librar
 
 For the first step of attack development I had students focus on building an attack that works when ASLR is disabled. For this part of the lab use ```setarch -R``` when you run the victim or for your whole shell.<br>
 
-Since the W xor X protection is enabled, we can't inject any shellcode in this program. We need to achieve the attacker's functionality using code already available in the program's address space. 
+Since the W xor X protection is enabled, we can't inject any shellcode in this program. We need to achieve the attacker's functionality using code already available in the program's address space. Specifically I instructed my students to do what is called a return to libc attack. A simple version of ROP where you call an entire function from the standard library. In particular we will take the classic choice of ```system``` as the library function to call since it already has the functionality of starting an external program. Also classically a convenient program for an attack to start is a shell, and the library includes a string containing the path to the standard shell ```/bin/sh``` since it is already a part of the implementation of ```system```. The functionality we are injecting is going to be like the C code
+
+```bash system("/bin/sh"); exit(anything);```
+
+
 
 ### Adding a Bit of ROP
 
