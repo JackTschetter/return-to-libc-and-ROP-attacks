@@ -19,7 +19,6 @@
     - [Disclaimer](#disclaimer)
 - [Contact](#contact)
 - [Acknowledgments](#acknowledgments)
-- [License](#license)
   
 ---
 
